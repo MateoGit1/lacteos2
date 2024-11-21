@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "server": "node server/index.js",
-    "start": "vite preview"
+    "start": "node routes/pqrsf.js"
   },
   "dependencies": {
     "lucide-react": "^0.344.0",
