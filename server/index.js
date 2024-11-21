@@ -34,31 +34,6 @@ app.get('/health', (req, res) => {
 app.use('/api', authRoutes);
 app.use('/api/pqrsf', pqrsfRoutes);
 
-// Asegurar que el usuario admin existe
-const setupAdminUser = async () => {
-  const adminPassword = process.env.ADMIN_PASSWORD || 'admin123';
-  const hashedPassword = hashPassword(adminPassword);
-  
-  try {
-    const [result] = await pool.execute(
-      'UPDATE users SET password = ? WHERE username = ?',
-      [hashedPassword, 'admin']
-    );
-    
-    if (result.affectedRows === 0) {
-      await pool.execute(
-        'INSERT INTO users (username, email, password, role) VALUES (?, ?, ?, ?)',
-        ['admin', 'admin@lacteosandinos.com', hashedPassword, 'admin']
-      );
-    }
-    
-    console.log('Admin user setup completed');
-  } catch (error) {
-    console.error('Error setting up admin user:', error);
-  }
-};
-
-setupAdminUser();
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
