@@ -16,7 +16,7 @@ function Login() {
     setLoading(true);
     
     try {
-      const response = await fetch('https://storied-malabi-d21d43.netlify.app/login', {
+      const response = await fetch('https://https://lacteos2.onrender.com/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
