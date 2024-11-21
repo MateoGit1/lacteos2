@@ -1,6 +1,6 @@
 const config = {
   apiUrl: import.meta.env.PROD 
-    ? 'https://your-backend-domain.railway.app/api'
+    ? 'lacteos2-production.up.railway.app'
     : 'http://localhost:3001/api'
 };
 
