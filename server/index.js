@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 
 // Configure CORS
 app.use(cors({
-  origin: process.env.CORS_ORIGIN || 'http://localhost:5173',
+  origin: process.env.CORS_ORIGIN || 'https://storied-malabi-d21d43.netlify.app/',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
