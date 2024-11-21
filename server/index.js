@@ -10,6 +10,12 @@ dotenv.config();
 
 const app = express();
 
+
+app.get('/', (req, res) => {
+  res.redirect('/health'); // O cualquier otra ruta válida
+});
+
+
 // Configure CORS
 app.use(cors({
   origin: process.env.CORS_ORIGIN || 'http://localhost:5173',
