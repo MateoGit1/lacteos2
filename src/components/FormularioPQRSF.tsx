@@ -90,7 +90,7 @@ function FormularioPQRSF() {
     }
 
     try {
-      const response = await fetch('http://https://lacteos2.onrender.com/api/pqrsf', {
+      const response = await fetch('https://lacteos2.onrender.com/api/pqrsf', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
