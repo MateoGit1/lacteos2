@@ -16,7 +16,7 @@ function Login() {
     setLoading(true);
     
     try {
-      const response = await fetch('https://https://lacteos2.onrender.com/login', {
+      const response = await fetch('https://lacteos2.onrender.com/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
