@@ -39,7 +39,7 @@ function Dashboard() {
         throw new Error('No token found');
       }
 
-      const response = await fetch('http://localhost:3001/api/pqrsf', {
+      const response = await fetch('https://lacteos2.onrender.com/pqrsf', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
