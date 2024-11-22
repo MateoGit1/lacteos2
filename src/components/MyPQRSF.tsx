@@ -22,7 +22,7 @@ function MyPQRSF() {
     const fetchMyPQRSFs = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch('https://lacteos2.onrender.com/pqrsf/my', {
+        const response = await fetch('https://lacteos2.onrender.com/api/pqrsf/my', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
