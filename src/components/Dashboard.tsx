@@ -78,7 +78,7 @@ function Dashboard() {
         throw new Error('No token found');
       }
 
-      const response = await fetch(`http://localhost:3001/api/pqrsf/${id}`, {
+      const response = await fetch(`https://lacteos2.onrender.com/api/pqrsf/${id}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -131,7 +131,7 @@ function Dashboard() {
         throw new Error('No token found');
       }
 
-      const response = await fetch(`http://localhost:3001/api/pqrsf/${id}`, {
+      const response = await fetch(`https://lacteos2.onrender.com/api/pqrsf/${id}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,
